@@ -1,9 +1,9 @@
 #contact
 
-This is my first write up on creating a simple web application from plain from post to SPA using different front-end/tooling and backend technologies or frameworks/libraries.
+This is my first write up on creating a simple web application from plain form post to SPA using different front-end/tooling and backend technologies or frameworks/libraries.
+
 
 I will start with a classic one, which you do form post for every actions. 
-
 
 Everything starts with an idea. 
 
@@ -11,7 +11,9 @@ For this write up, I have decided to create a simple contact list management. We
 
 
 The Product
-A simple contact list management that will help user organized their contact list information. It should have the following core features:
+    
+    A simple contact list management that will help user organized their contact list information. It should have the following core features:
+
     Core Features
     -------------
     Able to save user information such as Name, Address, Phone Number
@@ -21,7 +23,8 @@ A simple contact list management that will help user organized their contact lis
 
 
 Tech Stacks
-We have defined the product we wanted to create, now we should think about the technologies we are going to use. 
+    
+    We have defined the product we wanted to create, now we should think about the technologies we are going to use. 
 
     Backend
     -------
@@ -35,6 +38,24 @@ We have defined the product we wanted to create, now we should think about the t
     Frontend
     -------
     jQuery
+    materializecss
+    
+    
+    
+    
+UX
+    
+    We will skip this part since it can be a seperate subject. We should make it behave like any contact management tools we can find on the market.
+    
+
+Design
+
+    We will use materializecss for as our base design 
+    
+    
+
+
+    
     
 
 
