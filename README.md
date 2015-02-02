@@ -20,7 +20,7 @@ A simple contact list management that will help user organized their contact lis
 
 **Tech Stacks**
 We have defined the product we wanted to create, now we should think about the technologies we are going to use. 
-
+    
     Backend
     -------
     Node
@@ -99,9 +99,3 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     Step 5 - Initial index.html
 
     
-
-    
-    
-    
-
-
