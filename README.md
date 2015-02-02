@@ -12,10 +12,12 @@ For this write up, I have decided to create a simple contact list management. We
 
 The Product
 A simple contact list management that will help user organized their contact list information. It should have the following core features:
-    - Able to save user information such as Name, Address, Phone Number
-    - Able to edit contact information
-    - Able to delete contact information
-    - Able to search contact information
+    Core Features
+    -------------
+    Able to save user information such as Name, Address, Phone Number
+    Able to edit contact information
+    Able to delete contact information
+    Able to search contact information
 
 
 Tech Stacks
