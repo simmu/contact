@@ -57,7 +57,8 @@ Designing your database structure. Since we use mongo, our database will be in O
         first_name:@string,
         last_name:@string,
         email:@string,
-        phone:@number 
+        phone:@number ,
+        address:@string
     }
 
 The reason I like to have the database strcture planed out is because we can picture how our UI will be. We can always come back and add more as we see fits.
@@ -103,7 +104,7 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     
     This will be our contact application main screen. It will show a list of contact we have in the system. It will be a simple list that display user names. When a user click on the list, it will go to the detail view of the selected contact. For my own curiosity, I will use materialize design for the style.
     
-**Step 5: UI - Detail Page**
+**Step 5.1: UI - Detail Page**
     
     **Objective**
     
@@ -112,5 +113,8 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     We just created our first screen for the app. That wasn't that hard right? Now we have a main screen that displays list of contact names, but it doesn't do anything. We need to be able to see the detail of each contact. So, on whenever a user click on the name, the app should show them the contact detail that display the seletect contact's phone, email and address. Lets create the UI for the detail page.
 
     
+**Step 5.1: UI - Connecting the dots**
 
+   **Objective**
     
+    Yay, we have created 2 screens for our app. We have a home screen that display the list of contact and detail screen that shows the detial information. Now, we will give the first breath to our app by connecting these 2 screens together. When a user click on the contact list from the home screen, it should navigate to the detail view.
