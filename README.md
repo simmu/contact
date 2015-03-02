@@ -8,7 +8,7 @@ For this write up, I have decided to create a simple contact list management. We
 
 
 **The Product**
-A simple contact list management that will help user organized their contact list information. It should have the following core features:
+A simple contact list management system that will help user organize their contact list information. It should have the following core features:
 
     Core Features
     -------------
@@ -65,7 +65,7 @@ The reason I like to have the database strcture planed out is because we can pic
 
 
 **Step 2 : Installation**
-Have Node and mongo installed and running. There are many tutorials on how to install these software, so we will not cover it.
+Have Node and mongo installed and running. There are many tutorials on how to install these softwares, so we will go over it.
 
 
 
@@ -96,6 +96,10 @@ Once you have created the bower.json file. Open your terminal and go to the curr
     
 **Step 5: UI**
 Lets get our hands dirty and work on the markup for the UI. We will start with index.html and it will be the contact list view. All the markup changes will be in git commit order.
-    Step 5 - Initial index.html
+    **Objective**
+    
+    index.html will be our contact application home page. It will show a list of contact we have in the system. It will be a simple list that display user names. When a user click on the list, it will go to the detail view of the selected contact.
+    
+    
 
     
