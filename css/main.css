@@ -12,3 +12,19 @@ body {
     top: -35px;
     position: relative;
 }
+
+.detail-view{
+    font-size:16px;
+
+}
+
+.card .card-title h4{
+    color:#333;
+    font-size:150%;
+}
+
+.card i{
+    font-size:30px;
+    position: relative;
+    top:2px;
+}
