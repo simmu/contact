@@ -131,7 +131,22 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     Once we have linked all these pages (index, detail and new), we have created a working concept prototype. Now, we have a sense of how our app works. We can visualize and experience the UX on our app. If you think the UX is bad, you should stop here and reiterate your thoughts on the process again. Bad UX is bad for business! Even if you have a great coding skills, without good UX, no one will use it.
     
     
-
+**Step 6: Server **
     
+    **Objective**
+    
+    app.js
+    
+    Setup a running Node.jS server using Express framework. Make sure it can serve all the pages we just created.
+    
+    Yay, we made it to a new milestone. We and our imaginary investors are happy with the prototype. Its time to get real. We need a server to serve our app to millions of users. The server also reponsible on saving and keeping the contact info on database. It is true that we do not need database to save our data, we could you HTML local storage 
+    and it will still work. Remember, local storage only works with a single devices and it does not sync across devices. Another downside of local storage is that when a user clear their cache and data, the user will lose all the data.  
+    
+        Requirement:
+        NPM knowledge
+        Basic Node knowledge
+        Basic Express Framework knowledge
+    
+    Since we are using node.js and express for this app, due to the nature of express framework, we will have to move all our static content to a public folder.
     
     
