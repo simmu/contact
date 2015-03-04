@@ -115,6 +115,23 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     
 **Step 5.1: UI - Connecting the dots**
 
-   **Objective**
+    **Objective**
     
     Yay, we have created 2 screens for our app. We have a home screen that display the list of contact and detail screen that shows the detial information. Now, we will give the first breath to our app by connecting these 2 screens together. When a user click on the contact list from the home screen, it should navigate to the detail view.
+    
+    
+**Step 5.2: UI - Where does the content came from?**
+    
+    **Objective**
+    
+    new.html
+    
+    So we have given life to our app. We can navigate between the screens but something is not right. Yes, the data is fake! We need a way to create a contact information. We should create a new screen that can allow us to add Name, Phone Number, Email and Address. We should make sure all the screens we have created can link to each others. 
+    
+    Once we have linked all these pages (index, detail and new), we have created a working concept prototype. Now, we have a sense of how our app works. We can visualize and experience the UX on our app. If you think the UX is bad, you should stop here and reiterate your thoughts on the process again. Bad UX is bad for business! Even if you have a great coding skills, without good UX, no one will use it.
+    
+    
+
+    
+    
+    
