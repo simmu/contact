@@ -131,7 +131,7 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     Once we have linked all these pages (index, detail and new), we have created a working concept prototype. Now, we have a sense of how our app works. We can visualize and experience the UX on our app. If you think the UX is bad, you should stop here and reiterate your thoughts on the process again. Bad UX is bad for business! Even if you have a great coding skills, without good UX, no one will use it.
     
     
-**Step 6: Server **
+**Step 6: Server**
     
     **Objective**
     
@@ -148,5 +148,11 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
         Basic Express Framework knowledge
     
     Since we are using node.js and express for this app, due to the nature of express framework, we will have to move all our static content to a public folder.
+    http://expressjs.com/starter/static-files.html
     
+**Step 6.1: Server - Add Routing to view**
+
+    **Objectives**
     
+    Move the html to views folder and setup the routing to support the following route ('/','/view','/new)
+
