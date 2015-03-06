@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title= title
+        link(href="bower_components/materialize/dist/css/materialize.min.css", rel="stylesheet")
+        link(href="css/main.css", rel="stylesheet")
+    body
+        .container
+            header
+                h1.logo
+                    i.mdi-social-whatshot
+                        span.hide-on-small-only Simple Contact
+
+            .content
+                .add-new-header
+                    a(href="/new")
+                        i.mdi-content-add-circle New Contact
+
+            .contact-list.collection
+                a.collection-item.waves-effect.waves-teal(href="/detail") Sim
+                a.collection-item.waves-effect.waves-teal(href="/detail") Sim
+                a.collection-item.waves-effect.waves-teal(href="/detail") Sim
+
+        script(src="bower_components/jquery/dist/jquery.min.js")
+        script(src="bower_components/materialize/dist/js/materialize.min.js")
+

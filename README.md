@@ -155,4 +155,17 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     **Objectives**
     
     Move the html to views folder and setup the routing to support the following route ('/','/view','/new)
+    
+    
 
+**Step 6.1: Server - Render page with JADE
+
+    **Objectives**
+    
+    Learn how to use Jade (express default template) to render a page
+    
+    -- install jade template engine via npm
+    -- make the route render the page with jade template (index.jade, new.jade, detail.jade)
+    
+    
+    

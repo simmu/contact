@@ -1,0 +1,54 @@
+doctype html
+html
+    head
+        title= title
+        link(href="bower_components/materialize/dist/css/materialize.min.css", rel="stylesheet")
+        link(href="css/main.css", rel="stylesheet")
+    body
+        .container
+            header
+                h1.logo
+                    i.mdi-social-whatshot
+                        span.hide-on-small-only Simple Contact
+
+            .content
+                .sub-nav
+                    a(href="/")
+                        i.mdi-navigation-arrow-back Back To List
+
+            .row
+                form
+                    .row
+                        .input-field.col.m6.s12
+                            i.mdi-action-account-circle.prefix
+                            input#first_name.validate(type="text")
+                            label(for="first_name") First Name
+
+                        .input-field.col.m6.s12
+                            i.mdi-action-account-circle.prefix
+                            input#last_name.validate(type="text")
+                            label(for="last_name") Last Name
+
+                        .input-field.col.m6.s12
+                            i.mdi-action-account-circle.prefix
+                            input#phone.validate(type="text")
+                            label(for="phone") Telephone
+
+                        .input-field.col.m6.s12
+                            i.mdi-communication-email.prefix
+                            input#email.validate(type="email")
+                            label(for="email") Email
+
+                        .input-field.col.s12
+                            i.mdi-communication-email.prefix
+                            textarea#address.materialize-textarea(type="email")
+                            label(for="address") Address
+
+                    .actions
+                        a(href="/") Cancel
+                        button.btn-large.waves-effect.waves-light Add Contact
+
+
+        script(src="bower_components/jquery/dist/jquery.min.js")
+        script(src="bower_components/materialize/dist/js/materialize.min.js")
+
