@@ -170,8 +170,8 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
 **Step 6.2: Server - Render page with Mockup data
 
     **Objectives**
-    
-    Learn how to shape our data for rendering the page. This is a good pratice on what we want to store/get from the database.
+    index.jade
+    Learn how to shape our data for rendering the page. This is a good pratice on what we want to store/get from the database. We will start with returning a list of contact.
     
    
 **Bonus: Tooling - Installing nodemon
@@ -180,4 +180,12 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     
     By now you should realized that you have to restart the node server on each file changes. Lets' make our development easier with nodemon. Nodemon is a node module that can listen to file changes. We can tell it to restart the node server on file update. This will reduce a lot of development time.
         
+    
+**Step 6.2B: Server - Render page with Mockup data + route with parameter
+
+    **Objectives**
+    detail.jade
+    
+    We will render mockup data for detail view. We also included the 'contact_id' as a parameter to the detail route. The reason we are doign this so that the page is bookmarkable and SEO friendly.
+    
     

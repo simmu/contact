@@ -35,8 +35,18 @@ app.get('/', function(req, res){
 
 
 
-app.get('/detail', function(req, res){
-    res.render('detail',{title:'detail'});
+app.get('/detail/:user_id', function(req, res){
+    res.render('detail',{
+        title:'detail',
+        contact:{
+            id:2,
+            last_name: 'Smith',
+            first_name:'Jane',
+            phone:9173336666,
+            email:'JSmith@gmail.com',
+            address:'1600 Pennsylvania Avenue Northwest, Washington, DC 20500'
+        }
+    });
     //res.sendFile(__dirname +'/views/detail.html');
 });
 

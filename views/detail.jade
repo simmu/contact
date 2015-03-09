@@ -2,8 +2,8 @@ doctype html
 html
     head
         title= title
-        link(href="bower_components/materialize/dist/css/materialize.min.css", rel="stylesheet")
-        link(href="css/main.css", rel="stylesheet")
+        link(href="../bower_components/materialize/dist/css/materialize.min.css", rel="stylesheet")
+        link(href="../css/main.css", rel="stylesheet")
     body
         .container
             header
@@ -21,20 +21,23 @@ html
                         .card.blue-grey.lighten-5
                             .card-content
                                 span.card-title
-                                    h4 John Doe
+                                    h4=contact.last_name + ' ' + contact.first_name
                                 .section
                                     | <h5><i class="mdi-hardware-phone-iphone"></i>Phone Number</h5>
-                                    | 1-917-335-6612
+                                    |
+                                    =contact.phone
                                 .divider
                                 .section
                                     | <h5><i class="mdi-communication-email"></i>Email</h5>
-                                    | JonDoe@mydonuts.com
+                                    |
+                                    =contact.email
                                 .divider
                                 .section
                                     | <h5><i class="mdi-communication-business"></i>Address</h5>
-                                    | 1600 Pennsylvania Avenue Northwest, Washington, DC 20500
+                                    |
+                                    =contact.address
 
 
-        script(src="bower_components/jquery/dist/jquery.min.js")
-        script(src="bower_components/materialize/dist/js/materialize.min.js")
+        script(src="../bower_components/jquery/dist/jquery.min.js")
+        script(src="../bower_components/materialize/dist/js/materialize.min.js")
 
