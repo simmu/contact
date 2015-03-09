@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 
-
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
 
@@ -10,10 +9,31 @@ app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 
 app.get('/', function(req, res){
-    //res.sendFile(__dirname +'/views/index.html');
-    console.log('what');
-    res.render('index',{title:'hey'});
+    res.render('index',{
+
+        title:'contact',
+        contact_list:[
+            {
+                id:1,
+                last_name: 'Smith',
+                first_name:'John'
+            },
+            {
+                id:2,
+                last_name: 'Smith',
+                first_name:'Jane'
+            },
+            {
+                id:3,
+                last_name: 'Smith',
+                first_name:'Randol'
+            }
+        ]
+    });
 });
+
+
+
 
 app.get('/detail', function(req, res){
     res.render('detail',{title:'detail'});

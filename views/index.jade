@@ -17,9 +17,8 @@ html
                         i.mdi-content-add-circle New Contact
 
             .contact-list.collection
-                a.collection-item.waves-effect.waves-teal(href="/detail") Sim
-                a.collection-item.waves-effect.waves-teal(href="/detail") Sim
-                a.collection-item.waves-effect.waves-teal(href="/detail") Sim
+                each contact in contact_list
+                    a.collection-item.waves-effect.waves-teal(href="/detail/"+contact.id)= contact.first_name +' '+ contact.last_name
 
         script(src="bower_components/jquery/dist/jquery.min.js")
         script(src="bower_components/materialize/dist/js/materialize.min.js")

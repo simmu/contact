@@ -167,5 +167,12 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     -- install jade template engine via npm
     -- make the route render the page with jade template (index.jade, new.jade, detail.jade)
     
+**Step 6.2: Server - Render page with Mockup data
+
+    **Objectives**
+    
+    Learn how to shape our data for rendering the page. This is a good pratice on what we want to store/get from the database.
+    
+   
     
     
