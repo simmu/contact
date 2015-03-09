@@ -174,5 +174,10 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     Learn how to shape our data for rendering the page. This is a good pratice on what we want to store/get from the database.
     
    
+**Bonus: Tooling - Installing nodemon
+
+    **Objectives**
     
+    By now you should realized that you have to restart the node server on each file changes. Lets' make our development easier with nodemon. Nodemon is a node module that can listen to file changes. We can tell it to restart the node server on file update. This will reduce a lot of development time.
+        
     
