@@ -1,25 +1,12 @@
-doctype html
-html
-    head
-        title= title
-        link(href="bower_components/materialize/dist/css/materialize.min.css", rel="stylesheet")
-        link(href="css/main.css", rel="stylesheet")
-    body
-        .container
-            header
-                h1.logo
-                    i.mdi-social-whatshot
-                        span.hide-on-small-only Simple Contact
+extends ./layout.jade
 
-            .content
-                .add-new-header
-                    a(href="/new")
-                        i.mdi-content-add-circle New Contact
+block content
+    .content
+        .add-new-header
+            a(href="/new")
+                i.mdi-content-add-circle New Contact
 
-            .contact-list.collection
-                each contact in contact_list
-                    a.collection-item.waves-effect.waves-teal(href="/detail/"+contact.id)= contact.first_name +' '+ contact.last_name
-
-        script(src="bower_components/jquery/dist/jquery.min.js")
-        script(src="bower_components/materialize/dist/js/materialize.min.js")
+    .contact-list.collection
+        each contact in contact_list
+            a.collection-item.waves-effect.waves-teal(href="/detail/"+contact.id)= contact.first_name +' '+ contact.last_name
 

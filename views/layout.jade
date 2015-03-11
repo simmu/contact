@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/bower_components/materialize/dist/css/materialize.min.css')
+        link(rel='stylesheet', href='/css/main.css')
+    body
+        .container
+            header
+                h1.logo
+                    i.mdi-social-whatshot
+                        span.hide-on-small-only Quick Contact
+
+            block content
+                .content
+                    .add-new-header
+                        a(href="/new")
+                            i.mdi-content-add-circle New Contact
+
+                .contact-list.collection
+                    each contact in contact_list
+                        a.collection-item.waves-effect.waves-teal(href="/detail/"+contact.id)= contact.first_name +' '+ contact.last_name
+
+            block footer
+                script(src="bower_components/jquery/dist/jquery.min.js")
+                script(src="bower_components/materialize/dist/js/materialize.min.js")
+
