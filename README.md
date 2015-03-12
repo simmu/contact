@@ -208,4 +208,11 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     
 
 
+**Step 7.1: Server - Database to get the contact list
+
+    **Objectives**
+    
+    Learn how to use mongodb driver in node.
+    We will learn how to retrive our db collection data in Express
+    Connect to our contact database and retrive the contactList data into homepage.
 

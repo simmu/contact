@@ -8,5 +8,5 @@ block content
 
     .contact-list.collection
         each contact in contact_list
-            a.collection-item.waves-effect.waves-teal(href="/detail/"+contact.id)= contact.first_name +' '+ contact.last_name
+            a.collection-item.waves-effect.waves-teal(href="/detail/"+contact._id)= contact.first_name +' '+ contact.last_name
 
