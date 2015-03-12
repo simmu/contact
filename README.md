@@ -216,3 +216,8 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     We will learn how to retrive our db collection data in Express
     Connect to our contact database and retrive the contactList data into homepage.
 
+**Step 7.2: Server - Database to get the contact list detail
+
+    **Objectives**
+    
+    With the same principal as previous step, we will pass in the params to the query to retrive a particular record.

@@ -11,8 +11,8 @@ var server = new dbServer('localhost',27017, {auto_reconnect:true});
 
 var db = new Db('contact', server);
 
-app.set('views', __dirname + '/views')
-app.set('view engine', 'jade')
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
 
 app.use(express.static('public'));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
@@ -29,7 +29,6 @@ app.get('/', function(req, res){
 
 
     db.collection('contactList', function(err, collection) {
-
         collection.find().toArray(function(err, items) {
             console.log('items',items);
 
@@ -41,34 +40,23 @@ app.get('/', function(req, res){
         });
     });
 
-    /*
-    res.render('index',{
-
-        title:'contact',
-        contact_list:[
-            {
-                id:1,
-                last_name: 'Smith',
-                first_name:'John'
-            },
-            {
-                id:2,
-                last_name: 'Smith',
-                first_name:'Jane'
-            },
-            {
-                id:3,
-                last_name: 'Smith',
-                first_name:'Randol'
-            }
-        ]
-    });*/
 });
 
 
 
 
 app.get('/detail/:user_id', function(req, res){
+    var id = req.params.user_id;
+    db.collection('contactList', function(err, collection) {
+    collection.findOne({_id: new bson.ObjectID(id)},function(err, user) {
+            res.render('detail',{
+                title:'contact',
+                contact:user
+            });
+
+        });
+    });
+    /*
     res.render('detail',{
         title:'detail',
         contact:{
@@ -79,8 +67,7 @@ app.get('/detail/:user_id', function(req, res){
             email:'JSmith@gmail.com',
             address:'1600 Pennsylvania Avenue Northwest, Washington, DC 20500'
         }
-    });
-    //res.sendFile(__dirname +'/views/detail.html');
+    });*/
 });
 
 app.get('/new', function(req, res){
@@ -90,9 +77,9 @@ app.get('/new', function(req, res){
 
 var server = app.listen(3000, function () {
 
-  var host = server.address().address
-  var port = server.address().port
+  var host = server.address().address;
+  var port = server.address().port;
 
-  console.log('Example app listening at 222 http://%s:%s', host, port)
+  console.log('Example app listening at 222 http://%s:%s', host, port);
 
 });
