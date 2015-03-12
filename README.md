@@ -189,3 +189,23 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     We will render mockup data for detail view. We also included the 'contact_id' as a parameter to the detail route. The reason we are doign this so that the page is bookmarkable and SEO friendly.
     
     
+**Step 6.3: Server - Refactor the .jade template
+
+    **Objectives**
+    layout.jade
+    
+    So I like to update the logo text to 'quick contact' and  now we have to update all the 3 pages. This create a lot of repeating work. With JADE layout, we can avoid these repetive work by moving this common element into the layout and have the page inherits the common elements. 
+    
+      
+**Step 7.0: Server - Database setup    
+
+    **Objectives**
+    
+    Setup our database structure using mongo.
+    
+    create a 'contact' db
+    create a collection call contactList for storing the user contact information. Add a dummy data of first_name, last_name..etc like what we have for the detail mockup data.
+    
+
+
+
