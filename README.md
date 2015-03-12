@@ -221,3 +221,28 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     **Objectives**
     
     With the same principal as previous step, we will pass in the params to the query to retrive a particular record.
+    
+    
+**Step 7.2: Server - Database to get the contact list detail
+
+    **Objectives**
+    
+    With the same principal as previous step, we will pass in the params to the query to retrive a particular record.    
+    
+    
+**Step 7.3: Server - Database to get the contact list detail
+
+    **Objectives**
+    
+    With the same principal as previous step, we will pass in the params to the query to retrive a particular record.    
+
+
+**Step 7.3: Server - Create your first contact information
+
+    **Objectives**
+    Learn how to insert new record into mongodb in express
+    
+    So far we added fake data directly to the database. Its time for use to make use of the create form. We will add real contact information.
+    
+    
+    

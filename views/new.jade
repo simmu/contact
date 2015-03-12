@@ -17,7 +17,7 @@ html
                         i.mdi-navigation-arrow-back Back To List
 
             .row
-                form
+                form(action="new", method="post")
                     .row
                         .input-field.col.m6.s12
                             i.mdi-action-account-circle.prefix
@@ -41,7 +41,7 @@ html
 
                         .input-field.col.s12
                             i.mdi-communication-email.prefix
-                            textarea#address.materialize-textarea(type="address")
+                            textarea#address.materialize-textarea(name="address")
                             label(for="address") Address
 
                     .actions

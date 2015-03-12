@@ -1,5 +1,6 @@
 var express = require('express');
 var mongo = require('mongodb');
+var bodyParser = require('body-parser');
 var dbServer = mongo.Server,
     Db = mongo.Db,
     bson = mongo.BSONPure;
@@ -14,6 +15,7 @@ var db = new Db('contact', server);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
+app.use(bodyParser());
 app.use(express.static('public'));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
@@ -73,6 +75,23 @@ app.get('/detail/:user_id', function(req, res){
 app.get('/new', function(req, res){
     res.render('new',{title:'new'});
 });
+
+app.post('/new', function(req, res){
+    var user = req.body;
+    console.log('user', user);
+    db.collection('contactList', function(err, collection) {
+        collection.insert(user, {safe:true}, function(err, result) {
+            if (err) {
+                res.send({'error':'An error has occurred'});
+            } else {
+                console.log('Success: ' + JSON.stringify(result[0]));
+                res.redirect('/');
+            }
+        });
+    });
+});
+
+
 
 
 var server = app.listen(3000, function () {
