@@ -7,9 +7,10 @@ block content
                 i.mdi-navigation-arrow-back Back To List
 
     .row
-        form(action="new", method="post")
+        form(action="/update", method="post")
             include ./partials/contact-form.jade
+            input(type="hidden", name="contact_id", value="#{contact._id}")
             .actions
                 a(href="/") Cancel
-                button.btn-large.waves-effect.waves-light(type="submit") Add Contact
+                button.btn-large.waves-effect.waves-light(type="submit") Save
 

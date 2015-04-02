@@ -20,7 +20,16 @@ app.use(express.static('public'));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 
+/*helper for jade template - check for undefined variable*/
+app.locals.checkForUndefined = function(val){
+    console.log(val);
+    if(typeof val == 'undefined') return '';
+    return val;
+}
+
+
 db.open(function(err, db){
+ console.log('trying db');
    if(!err){
        console.log('connected to db');
    }
@@ -44,11 +53,8 @@ app.get('/', function(req, res){
 
 });
 
-
-
-
-app.get('/detail/:user_id', function(req, res){
-    var id = req.params.user_id;
+app.get('/detail/:contact_id', function(req, res){
+    var id = req.params.contact_id;
     db.collection('contactList', function(err, collection) {
     collection.findOne({_id: new bson.ObjectID(id)},function(err, user) {
             res.render('detail',{
@@ -73,7 +79,54 @@ app.get('/detail/:user_id', function(req, res){
 });
 
 app.get('/new', function(req, res){
-    res.render('new',{title:'new'});
+    res.render('new',{
+        title:'New',
+        contact:{}
+    });
+});
+
+app.get('/edit/:contact_id', function(req, res){
+    var id = req.params.contact_id;
+
+    db.collection('contactList', function(err, collection) {
+    collection.findOne({_id: new bson.ObjectID(id)},function(err, user) {
+            res.render('edit',{
+                title:'contact',
+                contact:user
+            });
+        });
+    });
+
+});
+
+app.post('/update', function(req, res){
+    db.collection('contactList', function(err, collection) {
+
+        var user = req.body;
+
+        collection.update(
+            {
+                _id:new bson.ObjectID(user.contact_id)
+            },
+            {
+                first_name:user.first_name,
+                last_name: user.last_name,
+                phone: user.phone,
+                email:user.email,
+                address:user.address
+            },
+            {
+                upsert:true
+            },
+            function(err, result) {
+                if (err) {
+                    console.log('Error updating wine: ' + err);
+                    res.send({'error':'An error has occurred'});
+                } else {
+                    res.redirect('/');
+                }
+            });
+    });
 });
 
 app.post('/new', function(req, res){
@@ -90,9 +143,6 @@ app.post('/new', function(req, res){
         });
     });
 });
-
-
-
 
 var server = app.listen(3000, function () {
 

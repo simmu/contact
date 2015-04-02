@@ -2,6 +2,10 @@ body {
     padding: 10% 0;
 }
 
+.clearfix {
+  overflow: auto;
+}
+
 .logo {
     font-size: 9em;
     margin: 0;
@@ -30,7 +34,13 @@ body {
 .card .card-title h4{
     color:#333;
     font-size:150%;
+    float:left;
 }
+
+.edit-btn{
+    float:right;
+}
+
 
 .card i{
     font-size:30px;

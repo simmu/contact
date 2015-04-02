@@ -10,8 +10,13 @@ block content
             .col.s12.m12
                 .card.blue-grey.lighten-5
                     .card-content
-                        span.card-title
-                            h4=contact.last_name + ' ' + contact.first_name
+                        .clearfix
+                            span.card-title
+                                h4=contact.last_name + ' ' + contact.first_name
+
+                            a.btn-floating.waves-effect.waves-light.edit-btn(href="/edit/"+contact._id)
+                                i.mdi-editor-mode-edit
+
                         .section
                             | <h5><i class="mdi-hardware-phone-iphone"></i>Phone Number</h5>
                             =contact.phone

@@ -245,4 +245,12 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     So far we added fake data directly to the database. Its time for use to make use of the create form. We will add real contact information.
     
     
+
+**Step 7.4: Server - Opps, I can't edit them.
+
+    **Objectives**
+    Learn how to update the existing contact
+    
+    So I just put in the wrong contact info, what do it do now? We need edit feature. Lets create a edit page and put the action on the detail view page.
+    
     
