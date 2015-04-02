@@ -57,3 +57,8 @@ body {
 .actions button{
     margin-left: 5px;
 }
+
+
+.delete-btn{
+    border:none;
+}

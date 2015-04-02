@@ -64,18 +64,6 @@ app.get('/detail/:contact_id', function(req, res){
 
         });
     });
-    /*
-    res.render('detail',{
-        title:'detail',
-        contact:{
-            id:2,
-            last_name: 'Smith',
-            first_name:'Jane',
-            phone:9173336666,
-            email:'JSmith@gmail.com',
-            address:'1600 Pennsylvania Avenue Northwest, Washington, DC 20500'
-        }
-    });*/
 });
 
 app.get('/new', function(req, res){
@@ -138,6 +126,20 @@ app.post('/new', function(req, res){
                 res.send({'error':'An error has occurred'});
             } else {
                 console.log('Success: ' + JSON.stringify(result[0]));
+                res.redirect('/');
+            }
+        });
+    });
+});
+
+app.post('/delete', function(req, res){
+    var id = req.body.contact_id;
+    db.collection('contactList', function(err, collection) {
+
+        collection.remove({_id: new bson.ObjectID(id)},function(err, user) {
+            if (err) {
+                res.send({'error':'An error has occurred'});
+            } else {
                 res.redirect('/');
             }
         });

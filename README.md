@@ -253,4 +253,10 @@ Lets get our hands dirty and work on the markup for the UI. We will start with i
     
     So I just put in the wrong contact info, what do it do now? We need edit feature. Lets create a edit page and put the action on the detail view page.
     
+**Step 7.5: Server - So..what if I want to delete a record.
+
+    **Objectives**
+    Learn how to delete a contact
     
+    Ok, So I got dumped...how do I remove the contact from my list. 
+        

@@ -17,6 +17,13 @@ block content
                             a.btn-floating.waves-effect.waves-light.edit-btn(href="/edit/"+contact._id)
                                 i.mdi-editor-mode-edit
 
+                            form(action="/delete", method="post")
+                                input(type="hidden", name="contact_id", value="#{contact._id}")
+                                .actions
+                                    button.btn-floating.waves-effect.waves-light.delete-btn(type="submit")
+                                        i.mdi-content-clear
+
+
                         .section
                             | <h5><i class="mdi-hardware-phone-iphone"></i>Phone Number</h5>
                             =contact.phone
